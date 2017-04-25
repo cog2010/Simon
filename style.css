@@ -1,0 +1,49 @@
+body{
+   background-image: url('http://static.audioaddict.com/e/7/8/3/9/b/e7839be1803a7734a554b55537b62968.png');
+   background-size: cover;
+   background-color: red;
+   background-blend-mode:lighten;
+   color: red;
+}
+#board{
+   background-color: black;
+   border-radius: 50%;
+   padding: 2%;
+   margin-top: 5vh;
+}
+#sideBar{
+   margin-top: 20vh;
+}
+.color-btn{
+   height: 22vw;
+   border: 10px solid black;
+}
+.btn:active{
+   filter:brightness(200%);
+}
+#green{
+   background-color: #090;
+   border-top-left-radius: 100%;
+}
+#red{
+   background-color: #b00;
+   border-top-right-radius: 100%;
+}
+#yellow{
+   background-color: #bb0;
+   border-bottom-left-radius: 100%;
+}
+#blue{
+   background-color: #00b;
+   border-bottom-right-radius: 100%;
+}
+.score{
+   background-color: black;
+   border: 2px solid gray;
+   border-radius: 5px;
+   height: 10vh;
+   color: red;
+}
+.brighten{
+  filter: brightness(200%);
+}
