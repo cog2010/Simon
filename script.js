@@ -29,14 +29,27 @@ $(document).ready(function(){
          var temp = Math.ceil(Math.random() * 4);
          sequence.push(temp);
       }
-      console.log(sequence);
+      //console.log(sequence);
    }
    function startRound() {
       round++;
+      if (round === 21){
+        $("#score").html("<h3>WIN</h3>");
+        setTimeout(function(){
+          if (strict == true){
+            $("#strict").toggleClass("btn-default , btn-danger");
+            strict = false;
+          }
+          getMoves();
+          startRound();
+
+        }, 3000);
+      }else {
       moveCount = 1;
       $("#score").html("<h1>" + round + "</h1>");
       playRound();
       //console.log("new round");
+    }
    }
    function playRound(){
       setTimeout(function(){
