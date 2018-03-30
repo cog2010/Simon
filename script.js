@@ -54,24 +54,32 @@ $(document).ready(function(){
    function playRound(){
       setTimeout(function(){
        if (sequence[k-1] ===1){
-         $("#green").toggleClass("brighten");
+        $("#green").toggleClass("brighten");
+        tone1.currentTime = 0;
         tone1.play();
-         setTimeout(function(){$("#green").toggleClass("brighten");}, 250);
+        setTimeout(function(){$("#green").toggleClass("brighten");}, 250);
       } else if (sequence[k-1] ===2){
-         $("#red").toggleClass("brighten");
-         tone2.play();
-         setTimeout(function(){$("#red").toggleClass("brighten");}, 250);
+        $("#red").toggleClass("brighten");
+        tone2.currentTime = 0;
+        tone2.play();
+        setTimeout(function(){$("#red").toggleClass("brighten");}, 250);
       } else if (sequence[k-1] ===3){
-           $("#yellow").toggleClass("brighten");
-           tone3.play();
-           setTimeout(function(){$("#yellow").toggleClass("brighten");}, 250);
+          $("#yellow").toggleClass("brighten");
+          tone3.currentTime = 0;
+          tone3.play();
+          setTimeout(function(){$("#yellow").toggleClass("brighten");}, 250);
        } else if (sequence[k-1] ===4){
-           $("#blue").toggleClass("brighten");
+          $("#blue").toggleClass("brighten");
+          tone4.currentTime = 0;
           tone4.play();
-           setTimeout(function(){$("#blue").toggleClass("brighten");}, 250);
+          setTimeout(function(){$("#blue").toggleClass("brighten");}, 250);
     }
     if (k < round){
-        k++
+        k++;
+        tone1.pause();
+        tone2.pause();
+        tone3.pause();
+        tone4.pause();
         playRound();
     }else{
         k=0;
@@ -111,21 +119,25 @@ $(document).ready(function(){
   $("#green").on("click", function(){
      player.push(1);
      checkMove(1);
+     tone1.currentTime = 0;
      tone1.play();
   });
   $("#red").on("click", function(){
      player.push(2);
      checkMove(2);
+     tone2.currentTime = 0;
      tone2.play();
   });
   $("#yellow").on("click", function(){
      player.push(3);
      checkMove(3);
+     tone3.currentTime = 0;
      tone3.play();
   });
   $("#blue").on("click", function(){
      player.push(4);
      checkMove(4);
+     tone4.currentTime = 0;
      tone4.play();
   });
 

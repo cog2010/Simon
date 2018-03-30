@@ -13,19 +13,19 @@
   </head>
   <body>
 
-     <div class = "container-fluid text-center">
-        <div id = "board" class = "box container col-lg-6 col-lg-offset-3 col-xs-10 col-xs-offset-1">
-           <div id = "green" class = "btn color-btn col-xs-6"></div>
-           <div id = "red" class = "btn color-btn col-xs-6"></div>
-           <div id = "yellow" class = "btn color-btn col-xs-6"></div>
-           <div id = "blue" class = "btn color-btn col-xs-6"></div>
-        </div>
-        <div id = "sideBar" class = "box container col-lg-1 col-lg-offset-1 col-xs-12">
-           <button id = "start" class = "btn btn-default col-lg-12 col-xs-4">Start</button>
-           <button id = "reset" class = "btn btn-default col-lg-12 col-xs-4">Reset</button>
-           <div id = "score" class = "score col-lg-12 col-xs-4 text-center"></div>
-           <button id = "strict" class = "btn btn-default col-lg-12 col-xs-4">Strict</button>
-        </div>
+     <div id = "simonGame" class = "text-center container col-xs-12 col-lg-4 col-lg-offset-4">
+        <div id = "board" class = "box container">
+           <div id = "green" class = "btn color-btn"></div>
+           <div id = "red" class = "btn color-btn"></div>
+           <div id = "yellow" class = "btn color-btn"></div>
+           <div id = "blue" class = "btn color-btn"></div>
+           <div id = "scoreBar" class = "box">
+              <button id = "start" class = "btn btn-default">Start</button>
+              <button id = "reset" class = "btn btn-default">Reset</button>
+              <button id = "strict" class = "btn btn-default">Strict</button>
+              <div id = "score" class = "score text-center"></div>
+          </div>
+        </div> 
      </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
